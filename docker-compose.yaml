@@ -1,0 +1,17 @@
+version: '3.5'
+
+volumes:
+  data:
+
+services:
+  database:
+    image: postgres:13
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=central_de_dados
+      - POSTGRES_PASSWORD=123456
+    volumes:
+      - data:/var/lib/postgresql/data
+      - type: tmpfs
+        target: /dev/shm
