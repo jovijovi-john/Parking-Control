@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ParkingControlApplication {
 
-	@GetMapping("/")
-	public String home() {
-		return "Hello World";
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(ParkingControlApplication.class, args);
 	}
